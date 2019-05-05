@@ -1,0 +1,28 @@
+<mat-card >
+  <mat-form-field style="margin: 30px">
+      <mat-select placeholder="Selet Camera" (selectionChange)="refreshView(currentRover, currentCamara)" [(ngModel)]="currentCamara">
+        <mat-option *ngFor="let camara of camaras" [value]="camara">
+          {{camara}}
+        </mat-option>
+      </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+      <mat-select placeholder="Selet Rover" (selectionChange)="refreshView(currentRover, currentCamara)" [(ngModel)]="currentRover">
+        <mat-option *ngFor="let rover of rovers" [value]="rover">
+          {{rover}}
+        </mat-option>
+      </mat-select>
+  </mat-form-field>
+</mat-card>
+
+<div class="container">
+  <mat-card class="card" *ngFor="let photo of marsPhotos ">
+    <mat-card-header>
+      <img mat-card-avatar [src]="avatar">
+      <mat-card-title>{{photo.rover.name}}</mat-card-title>
+      <mat-card-subtitle>{{photo.earth_date}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="photo.img_src" alt="">
+  </mat-card>
+</div>

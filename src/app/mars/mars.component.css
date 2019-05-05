@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.container .mat-card {
+    width: 300px;
+    margin: 1rem;
+}
+
+.select-container .mat-form-field-infix{
+    margin: 20px;
+    box-sizing: border-box;
+}

@@ -1,0 +1,12 @@
+.container{
+    width: 100%;
+    margin-top: 50px;
+}
+.card {
+    max-width: 700px;
+    margin: auto;
+}
+
+.card .imagen {
+    width: 100%;
+}
